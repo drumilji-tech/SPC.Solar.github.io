@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern Power Company - Solar Systems Anomaly Detection Machine Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .header img {
+            max-width: 200px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        h1 {
+            padding: 20px;
+        }
+
+        .algorithm-options {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+
+        .algorithm-options div {
+            flex-basis: 30%;
+            text-align: center;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .algorithm-options div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .algorithm-image {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .algorithm-image img {
+            width: 100%;
+            max-width: 600px;
+            border: 5px solid #ddd;
+        }
+
+        .gif-container {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="C:\Users\abcdr\OneDrive\Desktop\SP.png" alt="Southern Power Company Logo">
+    </div>
+    <div class="container">
+        <h1>Solar Systems Anomaly Detection</h1>
+		<div class="back-btn-container" style="text-align: center;">
+            <a href="index.html" class="back-btn">Back to Homepage</a>
+        </div>
+        <div class="algorithm-options">
+            <div id="option1" onclick="showImage('image1')">Isolation Forest</div>
+            <div id="option2" onclick="showImage('image2')">Local Outlier Factor</div>
+            <div id="option3" onclick="showImage('image3')">Single Class SVM</div>
+			<div id="option4" onclick="showImage('image4')">Results</div>
+		
+        </div>
+        <div class="algorithm-image" id="image1">
+            <img src="C:\Users\abcdr\OneDrive\Desktop\Iso.jpg" alt="Isolation Forest">
+        </div>
+        <div class="algorithm-image" id="image2">
+            <img src="C:\Users\abcdr\OneDrive\Desktop\lof.jpg" alt="Local Outlier Factor">
+        </div>
+        <div class="algorithm-image" id="image3">
+            <img src="C:\Users\abcdr\OneDrive\Desktop\svm.jpg" alt="Single Class SVM">
+        </div>
+	<div class="algorithm-image" id="image4">
+            <img src="C:\Users\abcdr\OneDrive\Desktop\Chart.jpg" alt="Results">
+        </div>
+    </div>
+    <script>
+        function showImage(id) {
+            // Hide all images
+            document.querySelectorAll('.algorithm-image').forEach(function(img) {
+                img.style.display = 'none';
+            });
+
+            // Show the selected image
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

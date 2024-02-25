@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern Power Company - Data Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .header img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .btn-container {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .btn, .back-btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #ffffff;
+            background-color: #005792;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover, .back-btn:hover {
+            background-color: #e58e26;
+        }
+
+        .data-container {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .data-container.active {
+            display: block;
+        }
+
+        /* Add any additional styling you need here */
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="C:\Users\abcdr\OneDrive\Desktop\SP.png" alt="Southern Power Company Logo">
+        <h1>Data Analysis</h1>
+    </div>
+    <div class="container">
+        <div class="btn-container">
+			<button class="btn" onclick="showData('live-data')">Live Data</button>
+            <button class="btn" onclick="showData('eda')">Exploratory Data Analysis</button>
+            <a href="index.html" class="back-btn">Back to Homepage</a>
+        </div>
+        <div class="data-container" id="eda">
+            <p>Exploratory Data Analysis content goes here.</p>
+			<a href="eda.html" class="btn">Click For Wonderful Visualizations</a>
+            <!-- Embed charts, graphs, summaries, etc. -->
+        </div>
+        <div class="data-container" id="live-data">
+            <p>Live Data Excel content goes here.</p>
+            <!-- Placeholder for Excel embed -->
+            <iframe src="https://drive.google.com/file/d/1NNoebhe9iPA-5wneHhDR3_KtrhKbjRAd/preview" width="700px" height="500px" frameborder="0">This is an embedded Microsoft Office document, powered by Office.</iframe>
+        </div>
+    </div>
+
+    <script>
+        function showData(type) {
+            // Hide all data containers
+            document.querySelectorAll('.data-container').forEach(function(container) {
+                container.classList.remove('active');
+            });
+
+            // Show the selected data container
+            document.getElementById(type).classList.add('active');
+        }
+    </script>
+</body>
+</html>
